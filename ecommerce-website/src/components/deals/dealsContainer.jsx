@@ -1,4 +1,5 @@
 import Deal from './dealCard'
+import React, { useRef } from 'react';
 
 const products = [
   { id: 1, name: 'T-shirt', description: 'This is a T-shirt.', price: 65 },
@@ -19,13 +20,36 @@ const products = [
 ];
 
 export default function dealsContainer() {
+  const containerRef = useRef(null);
+  
+  const handleScroll = (direction) => {
+    // Check if container exists
+    if (containerRef.current) {
+      if (direction === 'right') {
+        // Scroll to the right by 650 pixels
+        containerRef.current.scrollTo({
+          left: containerRef.current.scrollLeft + 650,
+          behavior: 'smooth', // Add smooth scrolling animation
+        });
+      } else {
+      // Scroll to the left by 650 pixels
+        containerRef.current.scrollTo({
+          left: containerRef.current.scrollLeft - 650,
+          behavior: 'smooth', // Add smooth scrolling animation
+        });
+      }
+    }
+  };
+
   return (
     <>
       <section className="deals-container">
         <h2>Deals</h2>
-        <div className='deals'>
+          <button onClick={() => handleScroll('left')} className='scroll-left'>&#129144;</button>
+        <div ref={containerRef} className='deals'>
           <Deal deals={products}/>
         </div>
+          <button onClick={() => handleScroll('right')} className='scroll-right'>&#129146;</button>
       </section>
     </>
   )

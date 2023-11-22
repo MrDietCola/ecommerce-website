@@ -60,6 +60,22 @@
   white-space: nowrap; /* Prevent content from wrapping to the next line */
 }
 
+.scroll-left {
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  top: 45%;
+  left: 20px;
+}
+
+.scroll-right {
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  top: 45%;
+  right: 20px;
+}
+
 /* For WebKit (Chrome, Safari) */
 .deals::-webkit-scrollbar {
   height: 5px;
@@ -81,6 +97,7 @@
 .deals-container {
   width: 100%;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
   text-align: center;
 }
 
@@ -101,9 +118,11 @@ main {
 .product-card {
   border: 2px solid black;
   border-radius: 4px;
-  margin: 0 5px;
-  min-width: 200px;
-  max-width: 200px;
+  margin: 0 5px 10px;
+  /* min-width: 200px;
+  max-width: 200px; */
+  width: 30%;
+  padding: 10px;
 }
 
 .content-container {
