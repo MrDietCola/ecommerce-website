@@ -86,8 +86,8 @@
 }
 
 main {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   width: 100vw;
 }
 
@@ -96,4 +96,22 @@ main {
   border-radius: 4px;
   margin: 0 5px;
   min-width: 200px;
+}
+
+.content-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.topic-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: none;
+  border: 1px solid black;
+}
+
+.topics-container {
+  width: 20%;
+  max-width: 300px;
 }

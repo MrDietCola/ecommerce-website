@@ -4,7 +4,7 @@ export default function dealCard(props) {
       key={deal.id}
       className="deal-card"
     >
-      <h2>{deal.name}</h2>
+      <h3>{deal.name}</h3>
       <p>{deal.price}</p>
       <p>{deal.description}</p>
     </div>
