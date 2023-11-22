@@ -136,7 +136,36 @@ main {
   flex-wrap: wrap;
 }
 
+.category-container {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  max-width: 300px;
+  position: sticky;
+  top: 56px;
+}
+
 footer {
   height: 300px;
   background-color: grey;
+}
+
+.profile-container {
+  display: flex;
+}
+
+.order-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.orders-title {
+  padding: 10px;
 }

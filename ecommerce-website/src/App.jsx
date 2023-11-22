@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DealsContainer from './components/deals/dealsContainer';
 import Topic from './components/topics';
 import HomepageProducts from './components/homepageProducts'
+import Profile from './components/profile/profile'
 
 const topics = [
   { id: 1, name: 'Clothing' },
@@ -23,22 +24,32 @@ const topics = [
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [profile, setProfile] = useState(false);
 
   return (
     <>
-      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} profile={profile} setProfile={setProfile}/>
       <main>
-        <DealsContainer />
-        <section className='content-container'>
-          <aside className='topics-container'>
-            <Topic topics={topics}/>
-          </aside>
-          <HomepageProducts/>
-        </section>
-        <footer>This is a footer</footer>
+        {profile ? ( 
+          <>
+            <Profile/>
+          </>
+        ) : (
+          <>
+            <DealsContainer />
+            <section className='content-container'>
+              <aside className='topics-container'>
+                <Topic topics={topics}/>
+              </aside>
+              <HomepageProducts/>
+            </section>
+            <footer>This is a footer</footer>
+          </>
+        )}
       </main>
     </>
-  )
+  );
 }
+
 
 export default App

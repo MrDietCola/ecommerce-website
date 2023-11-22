@@ -5,7 +5,7 @@ export default function dealCard(props) {
       className="deal-card"
     >
       <h3>{deal.name}</h3>
-      <p>{deal.price}</p>
+      <p>${deal.price}</p>
       <p>{deal.description}</p>
     </div>
   ));  
