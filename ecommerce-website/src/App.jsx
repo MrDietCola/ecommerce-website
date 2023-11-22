@@ -4,6 +4,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DealsContainer from './components/deals/dealsContainer';
 import Topic from './components/topics';
+import HomepageProducts from './components/homepageProducts'
 
 const topics = [
   { id: 1, name: 'Clothing' },
@@ -32,7 +33,9 @@ function App() {
           <aside className='topics-container'>
             <Topic topics={topics}/>
           </aside>
+          <HomepageProducts/>
         </section>
+        <footer>This is a footer</footer>
       </main>
     </>
   )

@@ -7,7 +7,7 @@ import Searcbar from './searchbar';
 
 export default function MyNavbar({loggedIn, setLoggedIn}) {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary" fixed='top'>
       <Container>
         <Navbar.Brand >React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

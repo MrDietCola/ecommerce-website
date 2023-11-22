@@ -60,7 +60,6 @@
   white-space: nowrap; /* Prevent content from wrapping to the next line */
 }
 
-
 /* For WebKit (Chrome, Safari) */
 .deals::-webkit-scrollbar {
   height: 5px;
@@ -88,7 +87,8 @@
 main {
   /* display: flex;
   justify-content: center; */
-  width: 100vw;
+  margin-top: 56px;
+  width: 100%;
 }
 
 .deal-card {
@@ -98,10 +98,19 @@ main {
   min-width: 200px;
 }
 
+.product-card {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0 5px;
+  min-width: 200px;
+  max-width: 200px;
+}
+
 .content-container {
   width: 100%;
   display: flex;
   justify-content: start;
+  align-items: flex-start;
 }
 
 .topic-btn {
@@ -112,6 +121,22 @@ main {
 }
 
 .topics-container {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
   max-width: 300px;
+  position: sticky;
+  top: 56px;
+}
+
+.product-container {
+  flex-grow: 1;
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+footer {
+  height: 300px;
+  background-color: grey;
 }
