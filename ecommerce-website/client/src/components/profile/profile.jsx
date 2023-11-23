@@ -15,6 +15,7 @@ export default function Profile() {
           <MyOrders/>
         </div>
       </section>
+      <footer>This is a footer</footer>
     </>
   )
 }

@@ -121,10 +121,21 @@ main {
   margin: 0 5px 10px;
   /* min-width: 200px;
   max-width: 200px; */
-  width: 30%;
+  /* width: 30%; */
   padding: 10px;
 }
 
+.single {
+  width: 90%;
+}
+
+.double {
+  width: 45%;
+}
+
+.triple {
+  width: 30%;
+}
 .content-container {
   width: 100%;
   display: flex;
@@ -146,6 +157,13 @@ main {
   max-width: 300px;
   position: sticky;
   top: 56px;
+}
+
+.result-container {
+  flex-grow: 1;
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
 }
 
 .product-container {
@@ -187,4 +205,12 @@ footer {
 
 .orders-title {
   padding: 10px;
+}
+
+.filter-container {
+  padding: 0 0 0 25px;
+}
+
+.cart-btn {
+  margin-left: 15px;
 }

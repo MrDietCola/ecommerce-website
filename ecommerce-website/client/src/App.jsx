@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './components/navbar/navbar'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +6,7 @@ import DealsContainer from './components/deals/dealsContainer';
 import Topic from './components/topics';
 import HomepageProducts from './components/homepageProducts'
 import Profile from './components/profile/profile'
+import CartPage from './components/cartPage';
 
 const topics = [
   { id: 1, name: 'Clothing' },
@@ -25,14 +26,19 @@ const topics = [
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [profile, setProfile] = useState(false);
+  const [cart, setCartPage] = useState(false);
 
   return (
     <>
-      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} profile={profile} setProfile={setProfile}/>
+      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} profile={profile} setProfile={setProfile} setCartPage={setCartPage}/>
       <main>
         {profile ? ( 
           <>
             <Profile/>
+          </>
+        ) : cart ? (
+          <>
+            <CartPage/>
           </>
         ) : (
           <>

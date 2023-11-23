@@ -1,4 +1,7 @@
 import Product from './productCard'
+import DisplayFilter from './displayFilter';
+import React, { useState, useEffect } from 'react';
+
 
 const products = [
   { id: 1, name: 'T-shirt', description: 'This is a T-shirt.', price: 25 },
@@ -46,10 +49,16 @@ const products = [
 ];
 
 export default function HomepageProducts() {
+  const filterOptions = ['single', 'double', 'triple']
+  const [filter, setFilter] = useState('double');
+
   return (
     <>
-      <section className="product-container">
-       <Product products={products}/>
+      <section >
+        <DisplayFilter filterOptions={filterOptions} setFilter={setFilter}/>
+        <div className='product-container'>          
+          <Product products={products} filter={filter} filterOptions={filterOptions}/>
+        </div>
       </section>
     </>
   )
